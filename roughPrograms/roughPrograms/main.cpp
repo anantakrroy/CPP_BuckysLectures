@@ -3,6 +3,7 @@
 #include <ctime>
 #include "Temperature.h"
 #include "Birthday.h"
+#include "People.h"
 
 using namespace std;
 
@@ -37,6 +38,13 @@ private:
 };
 
 int main() {
+		
+	Birthday birthObj(12, 02, 1990);
+	People peopleObj("Ananta", birthObj);
+	peopleObj.printDOB();
+
+	cout << "\n \n";
+
 	int inputTemp;
 	Temperature tempObject(inputTemp = 30);
 	Temperature *tempPointer = &tempObject;
@@ -48,7 +56,7 @@ int main() {
 	cin >> inputTemp;
 
 	cout << "Hey! I accessed the class object through a pointer! ";
-	tempPointer->printForPointer();
+	tempPointer->printForPointer();  //use the -> arrow member selection operator to access methods using pointers
 
 	if (inputTemp < 60 && inputTemp > -35 ) {
 		Temperature tempDisplay(inputTemp);

@@ -120,7 +120,7 @@
   <ItemGroup>
     <ClCompile Include="Birthday.cpp" />
     <ClCompile Include="People.cpp" />
-    <ClCompile Include="rough.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Temperature.cpp" />
   </ItemGroup>
   <ItemGroup>

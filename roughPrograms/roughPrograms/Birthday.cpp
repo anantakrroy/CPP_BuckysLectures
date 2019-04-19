@@ -11,7 +11,6 @@ Birthday::Birthday(int dd, int mm, int yyyy)
 }
 
 void Birthday::printBirthday() {
-	cout << "your birthday is ";
 	cout << day << "/" << month << "/" << year;
 
 }
