@@ -8,7 +8,7 @@
 using namespace std;
 
 class Context{
-public:
+	public:
 
 	Context(string defaultCurr) {
 		setCurrency(defaultCurr);
@@ -31,14 +31,21 @@ public:
 		return currency ;
 	}
 
+	private:
+		string currency;
 
-
-private:
-	string currency;
+	friend void contextFriend(Context context);
 };
 
+void contextFriend(Context c) {
+	cout << c.Sum(5, 100) << endl;
+}
+
 int main() {
-		
+
+	Context contextObj("Rupee");
+	contextFriend(contextObj);
+
 	Birthday birthObj(12, 02, 1990);
 	People peopleObj("Ananta", birthObj);
 	peopleObj.printDOB();
